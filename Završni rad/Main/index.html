@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <aside class="sidebar">
+        <h1 class="logo"><i class="fa-solid fa-music"></i> Musify</h1>
+
+        <nav>
+            <a href="#" class="active">
+                <i class="fa-solid fa-house"></i> Početna
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-compass"></i> Istraži
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-heart"></i> Sviđa mi se
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-folder"></i> Moje zbirke
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <a href="#">
+                <i class="fa-solid fa-gear"></i> Postavke
+            </a>
+            <a href="#">
+                <i class="fa-solid fa-user"></i> Prijava
+            </a>
+        </div>
+    </aside>
+
+    <main class="main-content">
+
+        <header class="topbar">
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput"
+                       placeholder="Pretraži pjesme ili izvođače...">
+            </div>
+
+            <button class="profile-btn">
+                <i class="fa-solid fa-user"></i>
+            </button>
+        </header>
+
+        <section class="welcome">
+            <p class="subtitle">DOBRODOŠLI U MUSIFY</p>
+            <h2>Glazba za svaki <span>trenutak.</span></h2>
+            <p>Otkrij novu glazbu i uživaj u svojim omiljenim pjesmama.</p>
+        </section>
+
+        <section class="genres">
+            <h2>Glazbeni žanrovi</h2>
+
+            <div class="genre-list">
+                <button class="genre-btn active" data-genre="All">Sve</button>
+                <button class="genre-btn" data-genre="Pop">Pop</button>
+                <button class="genre-btn" data-genre="Rock">Rock</button>
+                <button class="genre-btn" data-genre="Rap">Rap</button>
+                <button class="genre-btn" data-genre="Jazz">Jazz</button>
+                <button class="genre-btn" data-genre="EDM">EDM</button>
+            </div>
+        </section>
+
+        <section class="music-section">
+            <div class="section-heading">
+                <h2>Popularne pjesme</h2>
+                <a href="#">Prikaži sve</a>
+            </div>
+
+            <div class="music-grid" id="musicGrid">
+
+                <div class="music-card" data-genre="Pop">
+                    <div class="album purple">
+                        <i class="fa-solid fa-compact-disc"></i>
+                        <button class="like-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Blinding Lights</h3>
+                    <p>The Weeknd</p>
+                    <span>Pop</span>
+                    <button class="play-card" data-title="Blinding Lights"
+                            data-artist="The Weeknd">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="music-card" data-genre="Rap">
+                    <div class="album pink">
+                        <i class="fa-solid fa-headphones"></i>
+                        <button class="like-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>God's Plan</h3>
+                    <p>Drake</p>
+                    <span>Rap</span>
+                    <button class="play-card" data-title="God's Plan"
+                            data-artist="Drake">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="music-card" data-genre="Rock">
+                    <div class="album blue">
+                        <i class="fa-solid fa-guitar"></i>
+                        <button class="like-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Bohemian Rhapsody</h3>
+                    <p>Queen</p>
+                    <span>Rock</span>
+                    <button class="play-card" data-title="Bohemian Rhapsody"
+                            data-artist="Queen">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="music-card" data-genre="Jazz">
+                    <div class="album orange">
+                        <i class="fa-solid fa-saxophone"></i>
+                        <button class="like-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Fly Me to the Moon</h3>
+                    <p>Frank Sinatra</p>
+                    <span>Jazz</span>
+                    <button class="play-card" data-title="Fly Me to the Moon"
+                            data-artist="Frank Sinatra">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <div class="music-card" data-genre="EDM">
+                    <div class="album green">
+                        <i class="fa-solid fa-wave-square"></i>
+                        <button class="like-btn">
+                            <i class="fa-regular fa-heart"></i>
+                        </button>
+                    </div>
+                    <h3>Faded</h3>
+                    <p>Alan Walker</p>
+                    <span>EDM</span>
+                    <button class="play-card" data-title="Faded"
+                            data-artist="Alan Walker">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="music-section">
+            <div class="section-heading">
+                <h2>Za tvoje raspoloženje</h2>
+            </div>
+
+            <div class="mood-grid">
+                <div class="mood-card">
+                    <i class="fa-solid fa-cloud-sun"></i>
+                    <h3>Chill vibes</h3>
+                </div>
+                <div class="mood-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Energy</h3>
+                </div>
+                <div class="mood-card">
+                    <i class="fa-solid fa-moon"></i>
+                    <h3>Night mood</h3>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="player">
+        <div class="current-song">
+            <div class="mini-cover">
+                <i class="fa-solid fa-music"></i>
+            </div>
+            <div>
+                <h4 id="songTitle">Odaberi pjesmu</h4>
+                <p id="songArtist">Violet Music</p>
+            </div>
+        </div>
+
+        <div class="player-controls">
+            <button id="playBtn">
+                <i class="fa-solid fa-play"></i>
+            </button>
+            <div class="progress">
+                <span id="progressBar"></span>
+            </div>
+            <span class="time">0:00</span>
+        </div>
+
+        <div class="volume">
+            <i class="fa-solid fa-volume-high"></i>
+            <input type="range" min="0" max="100" value="70">
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
